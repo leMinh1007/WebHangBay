@@ -1,0 +1,39 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+<main>
+    <div class="page-section features" style="margin:200px 500px">
+        <h4> All Flight </h4>
+        <p>
+            
+            <a href="~/Home/ThemMoiChuyenBay" style="float:right">Add new Docs</a>
+        </p>
+
+
+
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>FlightNo</th>
+                    <th>Departure Date</th>
+                    <th>Point Of Loading</th>
+                    <th>Point Of UnLoading</th>
+                </tr>
+            </thead>
+            <tbody>
+              @foreach(var item in Model) 
+              { 
+                <tr>
+                    <td>@item.FlightNo</td>
+                    <td>@item.Ngay</td>
+                    <td>@item.DiemDi</td>
+                    <td>@item.DiemDen</td>
+                </tr>
+              }
+            </tbody>
+        </table>
+   </div>
+</main>
